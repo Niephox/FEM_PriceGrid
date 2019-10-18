@@ -1,0 +1,38 @@
+:root{
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    --ntrl-gray:hsl(204, 43%, 93%);
+    --ntrl-blue:hsl(218, 22%, 67%);
+}
+html{
+    font-size:16px;
+    font-family: 'Karla', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding:0;
+}
+.main-content{
+    display:flex;
+    flex-flow:row wrap;
+    height: 100vh;
+    width:100%;
+}
+
+.cta{
+    flex:1 1 100%;
+     
+}
+.subsc{
+    flex:  0 1 50%;
+    background-color:var(--primary-cyan);
+    color:white;
+}
+.about{
+    flex:  0 1 50%;
+    background-color:hsl(179, 82%, 45%);;
+    color:white;
+}
