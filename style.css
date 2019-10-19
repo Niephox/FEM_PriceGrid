@@ -20,19 +20,79 @@ body{
     flex-flow:row wrap;
     height: 100vh;
     width:100%;
+    
 }
 
 .cta{
     flex:1 1 100%;
-     
+    padding: 100px;    
 }
+
+.cta-header{
+    color:var(--primary-cyan);
+    font-weight: 700;
+    font-size: 3em;
+}
+.cta-subheader{
+    color:var(--primary-bright-yellow);
+    font-weight: 700;
+    font-size:1.7em;
+
+}
+.cta-p{
+    color:var(--ntrl-blue);
+    font-size:1.2em;
+}
+
 .subsc{
     flex:  0 1 50%;
     background-color:var(--primary-cyan);
     color:white;
+    padding: 100px;
+}
+.heading-m{
+    font-weight: 700;
+    font-size:1.7em;
+    letter-spacing: 1px;
+}
+.subsc-p-light{
+    display:flex;
+    flex-flow:row nowrap;
+    align-items: center;
+}
+.subsc-price{
+    font-weight: 700;
+    font-size:3em;
+    padding-right:15px;
+    text-align: center;
+}
+.subsc-price-sub{
+    text-align: center;
+     color:var(--ntrl-gray);
+     font-weight:700;
+}
+
+.subsc-button{
+    padding:20px;
+    width: 100%;
+    outline: 0;
+    border:0;
+    box-shadow: 1px 1px 20px gray;
+    background-color:var(--primary-bright-yellow);
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color:white;
+    margin-top:20px;
+    border-radius: 5px;
 }
 .about{
     flex:  0 1 50%;
     background-color:hsl(179, 82%, 45%);;
     color:white;
+    padding: 100px;
+}
+.about p {
+    font-size: 1.5em;
+    
 }
