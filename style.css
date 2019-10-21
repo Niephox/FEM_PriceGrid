@@ -11,21 +11,48 @@ html{
 *{
     box-sizing: border-box;
 }
+
+
+
+@-moz-document url-prefix() {
+
+    /* Disable scrollbar Firefox */
+    html {
+        scrollbar-width: none;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* Disable scrollbar Chrome/Safari/Webkit */
+}
 body{
     margin: 0;
     padding:0;
+     /* remove default margin */
+     scrollbar-width: none;
+     /* Also needed to disable scrollbar Firefox */
+     -ms-overflow-style: none;
+     /* Disable scrollbar IE 10+ */
+     overflow-y: scroll;
+}
+footer{
+    display:block;
 }
 .main-content{
     display:flex;
     flex-flow:row wrap;
-    height: 100vh;
+    height: 100%;
     width:100%;
     
 }
-
+.container{
+    padding: 100px;    
+}
 .cta{
     flex:1 1 100%;
-    padding: 100px;    
+    
 }
 
 .cta-header{
@@ -48,7 +75,7 @@ body{
     flex:  0 1 50%;
     background-color:var(--primary-cyan);
     color:white;
-    padding: 100px;
+    
 }
 .heading-m{
     font-weight: 700;
@@ -77,7 +104,7 @@ body{
     width: 100%;
     outline: 0;
     border:0;
-    box-shadow: 1px 1px 20px gray;
+    box-shadow: 1px 1px 8px var(--ntrl-blue);
     background-color:var(--primary-bright-yellow);
     font-weight: 700;
     font-size: 1.2em;
@@ -90,9 +117,28 @@ body{
     flex:  0 1 50%;
     background-color:hsl(179, 82%, 45%);;
     color:white;
-    padding: 100px;
+    
 }
 .about p {
     font-size: 1.5em;
     
+}
+@media screen and (max-width:768px) {
+    .container{
+        padding:40px
+        
+    }
+    .main-content{
+        align-content:center;
+        text-align:center;
+    }
+    .cta{
+        flex:0 1 100%;
+    }
+    .subsc{
+        flex:0 1 100%;
+    }
+    .about{
+        flex:0 1 100%;
+    }
 }
